@@ -6,5 +6,5 @@ RUN dotnet publish -c Release -o published
 FROM mcr.microsoft.com/dotnet/aspnet:5.0
 WORKDIR app
 COPY --from=build /app/published .
-EXPOSE 5000
+EXPOSE 80
 ENTRYPOINT dotnet ConversaoPeso.Web.dll
