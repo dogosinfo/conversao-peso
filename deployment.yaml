@@ -14,7 +14,7 @@ spec:
     spec:
       containers:
         - name: web
-          image: dogosinfo/kubedev-aula01-desafio02:v1
+          image: dogosinfo/conversao-peso:v1
           ports:
             - containerPort: 80    
 ---
@@ -30,4 +30,4 @@ spec:
       protocol: TCP
       name: http
       nodePort: 30000
-  type: NodePort
+  type: LoadBalancer
